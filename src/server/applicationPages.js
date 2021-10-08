@@ -1,1 +1,1 @@
-module.exports = {PLAY: 'play.tsx', Core:'page.tsx'}
+module.exports = {PLAY: 'play.tsx', Core:'tsx'}
