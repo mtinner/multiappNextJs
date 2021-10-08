@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = require("./src/server/nextConfig");
-module.exports =nextConfig
+const pageMap = require("./src/server/applicationPages");
+module.exports = {...nextConfig, pageExtensions: Object.values(pageMap)}
