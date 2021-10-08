@@ -2,11 +2,14 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
-import styles from '../styles/Home.module.css'
+import styles from '../apps/styles/Home.module.css'
 import Link from 'next/link'
+import {useRouter} from "next/router";
 
 
 const Home: NextPage = () => {
+  const {basePath} = useRouter();
+  console.log('basePath',basePath)
 
   return (
     <div className={styles.container}>
@@ -18,7 +21,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js! B</a>
+          Welcome to <a href="https://nextjs.org">Next.js! CH</a>
         </h1>
 
         <p className={styles.description}>
@@ -67,7 +70,7 @@ const Home: NextPage = () => {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>

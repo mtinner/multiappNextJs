@@ -8,13 +8,17 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve"
   },
+  "exclude": ["build", "next.config.js"],
+
   "include": [
-    "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
 }

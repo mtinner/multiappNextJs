@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  basePath:'/b',
+
+module.exports= {
+  basePath:'/play',
   reactStrictMode: true,
+  distDir:'build'
 }

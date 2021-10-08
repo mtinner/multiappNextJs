@@ -2,23 +2,34 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "ts-node server.ts",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "ts-node --project tsconfig.server.json src/server/index.ts",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:next": "next build",
+    "build": "yarn build:next && yarn build:server",
+    "lint": "next lint",
+    "start": "NODE_ENV=production node build/server/index.js"
   },
   "dependencies": {
+    "@koa/router": "8.0.8",
+    "koa": "2.13.0",
+    "koa-static": "5.0.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "ts-node": "10.2.1",
+    "@types/koa": "2.11.2",
+    "@types/koa-static": "^4.0.2",
+    "@types/koa__router": "8.0.3",
     "@types/react": "17.0.27",
+    "cross-env": "5.2.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "ts-node": "10.2.1",
     "typescript": "4.4.3"
   }
 }

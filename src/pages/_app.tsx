@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../apps/styles/globals.css'
 import App from "next/app";
 import type { AppProps, AppContext } from 'next/app'
 import {useRouter} from "next/router";
