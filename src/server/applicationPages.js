@@ -1,1 +1,1 @@
-module.exports = {PLAY: 'play.tsx', Core:'tsx'}
+module.exports = {PLAY: 'play.tsx', CorePages:'tsx', CoreApi:'ts'}

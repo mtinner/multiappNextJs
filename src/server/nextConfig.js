@@ -10,7 +10,7 @@ module.exports = (function() {
         basePath: '/play',
         reactStrictMode: true,
         distDir: 'build',
-        pageExtensions: [pageMap.Core, ...pageExtensions]
+        pageExtensions: [pageMap.CorePages,pageMap.CoreApi, ...pageExtensions]
     }
 })();
 
